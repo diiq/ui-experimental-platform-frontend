@@ -26,7 +26,10 @@
     <!-- endinject -->
   </head>
 
-  <body ng-app="experimentalPlatform" ng-strict-di>
+  <body ng-app="experimentalPlatform"
+        ng-controller="recordCtrl as record"
+        ng-keydown="record.key($event)"
+        ng-strict-di>
     <ui-view autoscroll="true"></ui-view>
 
 

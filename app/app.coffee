@@ -5,6 +5,7 @@ angular.module('experimentalPlatform', [
   'angular-loading-bar'
 
   # MODULE LIST AUTOGEN BELOW THIS LINE
+  'experimentalPlatform.arrowMenuTest'
 ])
 
 
@@ -28,5 +29,13 @@ angular.module('experimentalPlatform').run ($state, $rootScope) ->
 
   # UI Router silently swallows errors on resolve. This exposes them.
   $rootScope.$on '$stateChangeError',
-  (event, toState, toParams, fromState, fromParams, error) ->
-    throw error
+    (event, toState, toParams, fromState, fromParams, error) ->
+      throw error
+
+angular.module('experimentalPlatform').run ($rootScope, hotkeys) ->
+  $rootScope.$on '$stateChangeSuccess',
+    (event, toState, toParams, fromState, fromParams) ->
+      hotkeys.purgeHotkeys()
+
+      if (toState && toState.hotkeys)
+        _.each toState.hotkeys, hotkeys.add, hotkeys
