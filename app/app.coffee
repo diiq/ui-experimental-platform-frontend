@@ -4,6 +4,7 @@ angular.module('experimentalPlatform', [
   'ui.router'
   'angular-loading-bar'
   'experimentalPlatform.record'
+  'experimentalPlatform.config'
 
   # MODULE LIST AUTOGEN BELOW THIS LINE
   'experimentalPlatform.homepage'
