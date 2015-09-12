@@ -1,8 +1,11 @@
 <div id="login" class="grid-container">
   <div class="centered-box">
+    <div ng-show="login.error" ng-class="{visible: login.error}" class="centered-box-flash error">
+      {{ login.error }}
+    </div>
+
     <div class="centered-box-contents">
       <form ng-submit="login.formSubmit()">
-        {{ login.error }}
         <label>Email:
           <input type="text" ng-model="login.email" auto-focus>
         </label>

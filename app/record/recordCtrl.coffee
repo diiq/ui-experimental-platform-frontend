@@ -1,4 +1,4 @@
-angular.module('experimentalPlatform')
+angular.module('uiExperiments')
 .controller 'recordCtrl', (RecordService) ->
 
   RecordService.newRecord("the best one", 1)

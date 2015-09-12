@@ -1,10 +1,10 @@
-angular.module 'experimentalPlatform.arrowMenuTest', [
+angular.module 'uiExperiments.arrowMenuTest', [
   'ui.router'
   'cfp.hotkeys'
-  'experimentalPlatform.record'
+  'uiExperiments.record'
 ]
 
-angular.module('experimentalPlatform.arrowMenuTest').config ($stateProvider) ->
+angular.module('uiExperiments.arrowMenuTest').config ($stateProvider) ->
   $stateProvider
     .state 'arrowMenuTest',
       url: '/arrow-menu-test'

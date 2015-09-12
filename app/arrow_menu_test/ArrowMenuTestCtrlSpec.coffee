@@ -1,5 +1,5 @@
 describe "ArrowMenuTestCtrl:", ->
-  beforeEach(module("experimentalPlatform.arrowMenuTest"))
+  beforeEach(module("uiExperiments.arrowMenuTest"))
 
   beforeEach inject ($controller) ->
     @controllerService = $controller

@@ -1,1 +1,1 @@
-angular.module('experimentalPlatform.directives', [])
+angular.module('uiExperiments.directives', [])

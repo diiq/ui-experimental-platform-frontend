@@ -1,13 +1,30 @@
 <div id="signup" class="grid-container">
   <div class="centered-box">
-    <div class="centered-box-contents">
-      <form ng-submit="signup.formSubmit()">
+    <div ng-show="signup.error" ng-class="{visible: signup.error}" class="centered-box-flash error">
         {{ signup.error }}
+    </div>
+    <div class="centered-box-contents">
+      <form name="signupForm" ng-submit="signup.formSubmit()">
+
         <label>Your email:
-          <input type="text" ng-model="signup.email" auto-focus>
+          <span ng-if="signupForm.email.$touched" class="validation-error">
+            <span ng-if="signupForm.email.$error.required">
+              Please enter an email address
+            </span>
+            <span ng-if="signupForm.email.$error.email">
+              Please enter a valid email address
+            </span>
+          </span>
+          <input type="email" name="email" ng-model="signup.email" required auto-focus>
         </label>
+
         <label>A Password:
-          <input type="password" ng-model="signup.password">
+          <span ng-if="signupForm.password.$touched" class="validation-error">
+            <span ng-if="signupForm.password.$error.required">
+              Please enter a password
+            </span>
+          </span>
+          <input type="password" name="password" ng-model="signup.password" required>
         </label>
 
         <button>Sign Up!</button>

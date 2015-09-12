@@ -1,4 +1,4 @@
-angular.module('experimentalPlatform.login')
+angular.module('uiExperiments.login')
 .controller 'LoginCtrl', (UserService, $state, $stateParams) ->
 
   @formSubmit = () =>
@@ -9,7 +9,7 @@ angular.module('experimentalPlatform.login')
 
     error = (response) =>
       @password = ""
-      @error = "Login failed."
+      @error = response?.data?.message || "Login failed."
 
     UserService.login(@email, @password).then(success, error)
 

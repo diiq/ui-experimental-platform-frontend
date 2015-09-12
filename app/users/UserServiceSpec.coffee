@@ -1,5 +1,5 @@
 describe "UserService:", ->
-  beforeEach(module("experimentalPlatform.users"))
+  beforeEach(module("uiExperiments.users"))
 
   beforeEach inject (@UserService,
                      @$httpBackend,

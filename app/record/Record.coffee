@@ -1,1 +1,1 @@
-angular.module 'experimentalPlatform.record', []
+angular.module 'uiExperiments.record', []

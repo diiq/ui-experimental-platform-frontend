@@ -1,5 +1,5 @@
 describe "LoginCtrl:", ->
-  beforeEach(module("experimentalPlatform.login"))
+  beforeEach(module("uiExperiments.login"))
 
   beforeEach inject ($controller, $rootScope) ->
     @controllerService = $controller
@@ -20,7 +20,6 @@ describe "LoginCtrl:", ->
         $scope: @scope
         $state: @$state
         UserService: @UserService
-        FlashService: @FlashService
 
 
     describe "a successful login", ->

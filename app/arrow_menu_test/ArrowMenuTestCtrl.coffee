@@ -1,4 +1,4 @@
-angular.module('experimentalPlatform.arrowMenuTest')
+angular.module('uiExperiments.arrowMenuTest')
 .controller 'ArrowMenuTestCtrl', (hotkeys, RecordService) ->
   _hotkeys = [
     {

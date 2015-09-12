@@ -1,4 +1,4 @@
-angular.module('experimentalPlatform.homepage')
+angular.module('uiExperiments.homepage')
 .controller 'HomepageCtrl', ->
 
   @value = "Homepage"

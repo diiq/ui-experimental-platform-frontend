@@ -26,6 +26,25 @@
     padding: $base-spacing;
   }
 
+  .centered-box-flash {
+    @include clearfix;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s;
+
+    &.visible {
+      padding: ($base-spacing / 4) $base-spacing;
+      margin-top: $base-spacing;
+      max-height: 300px;
+    }
+
+    &.error {
+      background-color: $red;
+      color: #fff;
+    }
+  }
+
   .centered-box-title {
     margin: 0 0 $base-spacing 0;
     background-color: $base-accent-color;

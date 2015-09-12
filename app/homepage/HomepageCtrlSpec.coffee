@@ -1,5 +1,5 @@
 describe "HomepageCtrl:", ->
-  beforeEach(module("experimentalPlatform.homepage"))
+  beforeEach(module("uiExperiments.homepage"))
 
   beforeEach inject ($controller) ->
     @controllerService = $controller

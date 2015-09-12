@@ -1,4 +1,4 @@
-angular.module('experimentalPlatform.users', ['experimentalPlatform.config'])
+angular.module('uiExperiments.users', ['uiExperiments.config'])
 .service 'UserService', ($http, config) ->
 
   User: class User

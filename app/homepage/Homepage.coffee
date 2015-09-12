@@ -1,8 +1,8 @@
-angular.module 'experimentalPlatform.homepage', [
+angular.module 'uiExperiments.homepage', [
   'ui.router'
 ]
 
-angular.module('experimentalPlatform.homepage').config ($stateProvider) ->
+angular.module('uiExperiments.homepage').config ($stateProvider) ->
   $stateProvider
     .state 'homepage',
       url: '/'

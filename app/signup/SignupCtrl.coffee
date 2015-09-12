@@ -1,6 +1,5 @@
-angular.module('experimentalPlatform.signup')
-.controller 'SignupCtrl', (UserService) ->
-
+angular.module('uiExperiments.signup')
+.controller 'SignupCtrl', ($scope, UserService, $state, $stateParams) ->
 
   @formSubmit = () =>
     success = =>
@@ -10,10 +9,10 @@ angular.module('experimentalPlatform.signup')
 
     error = (response) =>
       @password = ""
-      @error = "Signup failed."
+      @email = ""
+      @error = response.data.message
+      $scope.signupForm.$setUntouched()
 
     UserService.create(@email, @password).then(success, error)
-
-  @value = "Signup"
 
   return this

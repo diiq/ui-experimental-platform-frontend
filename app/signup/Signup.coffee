@@ -1,11 +1,13 @@
-angular.module 'experimentalPlatform.signup', [
+angular.module 'uiExperiments.signup', [
   'ui.router'
-  'experimentalPlatform.users'
+  'uiExperiments.users'
 ]
 
-angular.module('experimentalPlatform.signup').config ($stateProvider) ->
+angular.module('uiExperiments.signup').config ($stateProvider) ->
   $stateProvider
     .state 'signup',
       url: '/signup'
+      params:
+        destination: null
       templateUrl: '/signup/signup.html'
       controller: 'SignupCtrl as signup'

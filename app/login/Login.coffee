@@ -1,11 +1,13 @@
-angular.module 'experimentalPlatform.login', [
+angular.module 'uiExperiments.login', [
   'ui.router'
-  'experimentalPlatform.users'
+  'uiExperiments.users'
 ]
 
-angular.module('experimentalPlatform.login').config ($stateProvider) ->
+angular.module('uiExperiments.login').config ($stateProvider) ->
   $stateProvider
     .state 'login',
       url: '/login'
+      params:
+        destination: null
       templateUrl: '/login/login.html'
       controller: 'LoginCtrl as login'

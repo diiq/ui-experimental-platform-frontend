@@ -1,4 +1,4 @@
-angular.module('experimentalPlatform.directives')
+angular.module('uiExperiments.directives')
 .directive 'autoFocus', ($timeout) ->
   restrict: 'AC',
   link: (_scope, _element) ->
