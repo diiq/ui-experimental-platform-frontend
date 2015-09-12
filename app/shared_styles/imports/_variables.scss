@@ -11,17 +11,20 @@ $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 10px;
-$base-spacing: $base-line-height * 1em;
+$base-spacing: $base-line-height * 1.25em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
 $orange: #fa0;
+$white: #f2f2f2;
+$green: #75a33f;
+$red: #bf2a2a;
 $base-accent-color: $orange;
 $blue: #477dca;
 $dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+$medium-gray: #737272;
+$light-gray: #bfb9b8;
 
 // Font Colors
 $base-background-color: #fff;

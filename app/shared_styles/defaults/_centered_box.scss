@@ -7,7 +7,7 @@
   border: $base-border;
   border-radius: $base-border-radius;
   overflow: auto;
-  background-color: #fff;
+  background-color: $white;
 
   @include media($tablet-grid) {
     @include span-columns(6);
@@ -23,7 +23,7 @@
 
   .centered-box-contents {
     @include clearfix;
-    margin: $base-spacing;
+    padding: $base-spacing;
   }
 
   .centered-box-title {

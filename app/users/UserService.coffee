@@ -7,6 +7,8 @@ angular.module('experimentalPlatform.users', ['experimentalPlatform.config'])
 
   authUrl: "#{config.apiBase}/api/v1/auth"
 
+  usersUrl: "#{config.apiBase}/api/v1/users"
+
   me: ->
     # Allowing this to return `undefined` means me *always* resolves;
     # that allows us to state-resolve-redirect to login when necessary.
@@ -22,3 +24,6 @@ angular.module('experimentalPlatform.users', ['experimentalPlatform.config'])
 
   logout: () ->
     $http.delete @authUrl
+
+  create: (email, password) ->
+    $http.post @usersUrl, { email: email, password: password }

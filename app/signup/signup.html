@@ -1,0 +1,26 @@
+<div id="signup" class="grid-container">
+  <div class="centered-box">
+    <div class="centered-box-contents">
+      <form ng-submit="signup.formSubmit()">
+        {{ signup.error }}
+        <label>Your email:
+          <input type="text" ng-model="signup.email" auto-focus>
+        </label>
+        <label>A Password:
+          <input type="password" ng-model="signup.password">
+        </label>
+
+        <button>Sign Up!</button>
+      </form>
+    </div>
+    <div class="centered-box-contents privacy">
+      <h3>A Note About Your Privacy:</h3>
+      <p>Your email and your identity will always remain private.
+        Data collected during experiments (which may include
+        keystrokes and mouse movement, but only those occurring on
+        this site) can and will be collected and made
+        public.</p>
+      <p>Thanks for signing up!</p>
+    </div>
+  </div>
+</div>

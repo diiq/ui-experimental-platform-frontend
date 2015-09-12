@@ -5,8 +5,10 @@ angular.module('experimentalPlatform', [
   'angular-loading-bar'
   'experimentalPlatform.record'
   'experimentalPlatform.config'
+  'experimentalPlatform.directives'
 
   # MODULE LIST AUTOGEN BELOW THIS LINE
+  'experimentalPlatform.signup'
   'experimentalPlatform.homepage'
   'experimentalPlatform.login'
   'experimentalPlatform.arrowMenuTest'
