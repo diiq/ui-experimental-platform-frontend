@@ -11,25 +11,21 @@ debug = false
 # Runs end-to-end tests against a dev build. e2e tests get their own server on
 # port 3001, so as to not interfere with the main dev server (and BrowserSync)
 # on port 3001
-gulp.task 'test/e2e', ['test/e2e/webserver', 'build/test/e2e', 'test/e2e/webdriver/update'], ->
+gulp.task 'test/e2e', ['build/test/e2e', 'test/e2e/webdriver/update'], ->
   gulp.src(['build/e2e-tests/**/*.js'])
     .pipe(protractor(
       configFile: 'build/e2e-tests/protractor.config.js'
       debug: debug
     ))
-    .on 'error', -> connect.serverClose()
-    .on 'end', -> connect.serverClose()
 
 
 # Same thing as above, but against dist
-gulp.task 'test/dist/e2e', ['test/dist/e2e/webserver', 'build/test/e2e', 'test/e2e/webdriver/update'], ->
+gulp.task 'test/dist/e2e', ['build/test/e2e', 'test/e2e/webdriver/update'], ->
   gulp.src(['build/e2e-tests/**/*.js'])
     .pipe(protractor(
       configFile: 'build/e2e-tests/protractor.config.js'
       debug: debug
     ))
-    .on 'error', -> connect.serverClose()
-    .on 'end', -> connect.serverClose()
 
 
 # Stops the tests at the point you say browser.debugger()

@@ -16,7 +16,7 @@ gulp.task 'build/dev/index.html', ['build/dev/js', 'build/dev/bower', 'build/dev
   bower = gulp.src(bowerFiles(), { base: "bower_components", read: false })
 
   # Get a stream of all our JS files (excluding bower files), sorted by angularFileSort()
-  js = gulp.src(['**/*.js', '!bower_components/**/*', '!templates.js'], { cwd: 'build/dev' })
+  js = gulp.src(['**/*.js', '!templates.js'], { cwd: 'build/dev' })
     .pipe(naturalSort())
     .pipe(angularFilesort())
 
@@ -61,7 +61,7 @@ gulp.task 'build/dist/index.html', ['build/dist/app.js', 'build/dist/app.css'], 
         transform: (filePath, file) ->
           file.contents.toString('utf8')
     ))
-    .pipe(revall(ignore: [ /^\/index.html/ ]))
+    .pipe(revall(base: 'app', ignore: [ /^\/index.html/ ]))
     .pipe(htmlmin({
       removeComments: true
       collapseWhitespace: true

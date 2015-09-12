@@ -30,7 +30,7 @@ gulp.task 'build/test/e2e', ->
 
 gulp.task 'build/test/unit/angular-mocks', ->
   gulp.src(['bower_components/angular-mocks/angular-mocks.js'])
-    .pipe(gulp.dest('build/test/bower_components'))
+    .pipe(gulp.dest('build/bower_components'))
 
 
 # This is here mostly to make the terminal beep when CoffeeScript compilation fails

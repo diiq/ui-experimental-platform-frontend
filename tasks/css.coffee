@@ -31,7 +31,7 @@ gulp.task 'build/dist/main.css', ->
     .pipe(sass(includePaths: ['bower_components/', 'app/shared_styles', 'app/']))
     .pipe(naturalSort())
     .pipe(concat('main.css'))
-    .pipe(revall())
+    .pipe(revall(base: 'app'))
     .pipe(gulp.dest('build/dist.tmp'))
 
 

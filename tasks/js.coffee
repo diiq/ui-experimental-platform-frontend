@@ -14,7 +14,13 @@ sourcemaps = require('gulp-sourcemaps')
 
 
 gulp.task 'build/dev/js', ->
-  gulp.src(['app/**/*.coffee', '!app/**/*Spec.coffee', 'config/dev.coffee'])
+  configFile = "config/dev.coffee"
+
+  if !fs.existsSync(configFile)
+    console.error "Config file (#{configFile}) not found."
+    process.exit(1)
+
+  gulp.src(['app/**/*.coffee', '!app/**/*Spec.coffee', configFile])
     .pipe(changed('build/dev', extension: '.js'))
     .pipe(sourcemaps.init())
     .pipe(plumber(compileError))
@@ -37,7 +43,7 @@ gulp.task 'build/dist/main.js', ->
     .pipe(naturalSort())
     .pipe(angularFilesort())
     .pipe(concat('main.js'))
-    .pipe(revall())
+    .pipe(revall(base: 'app'))
     .pipe(gulp.dest('build/dist.tmp'))
 
 

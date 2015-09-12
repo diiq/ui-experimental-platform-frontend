@@ -11,6 +11,6 @@ gulp.task 'build/dev/images', ->
 
 gulp.task 'build/dist/images',  ->
   gulp.src(imageFiles)
-    .pipe(revall(ignore: [ /^\/static\// ]))
+    .pipe(revall(base: 'app', ignore: [ /^\/static\// ]))
     .pipe(imagemin())
     .pipe(gulp.dest('build/dist'))

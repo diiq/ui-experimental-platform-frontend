@@ -27,7 +27,7 @@ gulp.task 'build/dist/app.js', ['build/dist/bower.js', 'build/dist/main.js', 'bu
   gulp.src(['build/dist.tmp/bower.*.js', 'build/dist.tmp/main.*.js', 'build/dist.tmp/templates.*.js'])
     .pipe(concat('app.js'))
     .pipe(uglify())
-    .pipe(revall())
+    .pipe(revall(base: 'app'))
     .pipe(gulp.dest('build/dist'))
 
 
@@ -38,5 +38,5 @@ gulp.task 'build/dist/app.css', ['build/dist/main.css', 'build/dist/bower.css'],
   gulp.src(['build/dist.tmp/bower.*.css', 'build/dist.tmp/main.*.css'])
     .pipe(concat('app.css'))
     .pipe(minifyCSS())
-    .pipe(revall())
+    .pipe(revall(base: 'app'))
     .pipe(gulp.dest('build/dist'))
