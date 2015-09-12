@@ -6,6 +6,8 @@ angular.module('experimentalPlatform', [
   'experimentalPlatform.record'
 
   # MODULE LIST AUTOGEN BELOW THIS LINE
+  'experimentalPlatform.homepage'
+  'experimentalPlatform.login'
   'experimentalPlatform.arrowMenuTest'
 ])
 

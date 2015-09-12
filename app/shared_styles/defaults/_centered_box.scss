@@ -1,0 +1,36 @@
+@import 'imports';
+
+.centered-box {
+  @include span-columns(6);
+  @include shift(3);
+  margin-top: $base-spacing * 2;
+  border: $base-border;
+  border-radius: $base-border-radius;
+  overflow: auto;
+  background-color: #fff;
+
+  @include media($tablet-grid) {
+    @include span-columns(6);
+    @include shift(1);
+    margin-top: $base-spacing;
+  }
+
+  @include media($mobile-grid) {
+    @include span-columns(4);
+    @include shift(0);
+    margin-top: $base-spacing;
+  }
+
+  .centered-box-contents {
+    @include clearfix;
+    margin: $base-spacing;
+  }
+
+  .centered-box-title {
+    margin: 0 0 $base-spacing 0;
+    background-color: $base-accent-color;
+    padding: ($base-spacing / 2) $base-spacing;
+    color: #fff;
+    line-height: 1.5;
+  }
+}

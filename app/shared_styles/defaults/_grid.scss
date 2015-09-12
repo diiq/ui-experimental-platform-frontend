@@ -1,3 +1,7 @@
+body {
+  background-color: $light-gray;
+}
+
 .grid-container {
   @include outer-container();
 

@@ -1,0 +1,16 @@
+@import 'imports';
+
+#login {
+  button {
+    margin-top: $base-spacing / 2;
+    float: right;
+    width: 30%;
+    margin-left: $base-spacing / 2;
+  }
+
+  .links {
+    float: left;
+    font-size: .8em;
+    margin-top: $base-spacing / 2;
+  }
+}

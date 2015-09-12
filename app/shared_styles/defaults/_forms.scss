@@ -32,7 +32,7 @@ textarea {
   transition: border-color;
   margin-bottom: $base-spacing / 2;
   border: $base-border;
-  border-radius: $base-border-radius;
+  border-radius: $base-border-radius / 2;
   box-shadow: $form-box-shadow;
   background-color: $base-background-color;
   padding: $base-spacing / 3;
