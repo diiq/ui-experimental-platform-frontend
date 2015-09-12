@@ -18,11 +18,13 @@ button {
   font-weight: 600;
   -webkit-font-smoothing: antialiased;
   user-select: none;
+  border-top: 1px solid lighten($action-color, 15%);
 
   &:hover,
   &:focus {
     background-color: darken($action-color, 15%);
     color: #fff;
+    border-color: transparent;
   }
 
   &:focus {
@@ -38,11 +40,13 @@ button {
 
   &.secondary {
     background-color: $light-gray;
+    border-top: 1px solid lighten($light-gray, 15%);
 
     &:hover,
     &:focus {
       background-color: darken($light-gray, 15%);
       color: #fff;
+      border-color: transparent;
     }
   }
 }
