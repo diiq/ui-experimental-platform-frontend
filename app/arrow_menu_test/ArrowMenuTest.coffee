@@ -1,6 +1,7 @@
 angular.module 'experimentalPlatform.arrowMenuTest', [
   'ui.router'
   'cfp.hotkeys'
+  'experimentalPlatform.record'
 ]
 
 angular.module('experimentalPlatform.arrowMenuTest').config ($stateProvider) ->
@@ -9,10 +10,3 @@ angular.module('experimentalPlatform.arrowMenuTest').config ($stateProvider) ->
       url: '/arrow-menu-test'
       templateUrl: '/arrow_menu_test/arrow_menu_test.html'
       controller: 'ArrowMenuTestCtrl as arrowMenuTest'
-      hotkeys: [
-        {
-          combo: 'space'
-          description: 'This one goes to 11'
-          callback: -> alert("r")
-        }
-      ]

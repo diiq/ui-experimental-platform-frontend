@@ -3,6 +3,7 @@ angular.module('experimentalPlatform', [
   # External modules
   'ui.router'
   'angular-loading-bar'
+  'experimentalPlatform.record'
 
   # MODULE LIST AUTOGEN BELOW THIS LINE
   'experimentalPlatform.arrowMenuTest'
@@ -33,9 +34,6 @@ angular.module('experimentalPlatform').run ($state, $rootScope) ->
       throw error
 
 angular.module('experimentalPlatform').run ($rootScope, hotkeys) ->
-  $rootScope.$on '$stateChangeSuccess',
+  $rootScope.$on '$stateChangeStart',
     (event, toState, toParams, fromState, fromParams) ->
       hotkeys.purgeHotkeys()
-
-      if (toState && toState.hotkeys)
-        _.each toState.hotkeys, hotkeys.add, hotkeys
