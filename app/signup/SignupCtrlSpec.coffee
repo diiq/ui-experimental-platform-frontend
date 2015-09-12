@@ -4,6 +4,7 @@ describe "SignupCtrl:", ->
   beforeEach inject ($controller, $rootScope) ->
     @controllerService = $controller
     @scope = $rootScope.$new()
+    @scope.signupForm = jasmine.createSpyObj(['$setUntouched'])
 
   describe "formSubmit()", ->
     beforeEach inject (@$state, @UserService, $q) ->
