@@ -8,7 +8,6 @@ angular.module('uiExperiments', [
   'uiExperiments.directives'
 
   # MODULE LIST AUTOGEN BELOW THIS LINE
-  'uiExperiments.header'
   'uiExperiments.signup'
   'uiExperiments.homepage'
   'uiExperiments.login'
