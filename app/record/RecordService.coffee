@@ -26,6 +26,9 @@ angular.module('uiExperiments.record')
       @record.allEvents
 
   addEvent: (type, data, options={}) ->
+    if !@record
+      return
+
     stream = @_stream(options)
     if stream
       stream.push

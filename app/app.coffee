@@ -8,6 +8,8 @@ angular.module('uiExperiments', [
   'uiExperiments.directives'
 
   # MODULE LIST AUTOGEN BELOW THIS LINE
+  #  'uiExperiments.experiments.fittsLaw'
+  #  'uiExperiments.experiments'
   'uiExperiments.signup'
   'uiExperiments.homepage'
   'uiExperiments.login'
@@ -19,7 +21,7 @@ angular.module('uiExperiments').config ($locationProvider) ->
   $locationProvider.html5Mode(enabled: true, requireBase: false).hashPrefix('!');
 
 angular.module('uiExperiments').config ($urlRouterProvider) ->
-  $urlRouterProvider.otherwise('/')
+  $urlRouterProvider.otherwise('/four-oh-four')
 
 angular.module('uiExperiments').config ($httpProvider) ->
   $httpProvider.defaults.withCredentials = true
