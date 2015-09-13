@@ -1,4 +1,4 @@
-angular.module('experimentalPlatform.config', [])
+angular.module('uiExperiments.config', [])
 
-angular.module('experimentalPlatform.config').constant "config",
+angular.module('uiExperiments.config').constant "config",
   apiBase: "http://api.ui-experiments.com"
