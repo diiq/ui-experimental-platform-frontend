@@ -25,7 +25,6 @@ h1 { font-size:1.5em; padding:1.45833em 0; }
 h2 { font-size:1.33333em; padding:1.25em 0; }
 h3 {
   @include font-feature-settings("c2sc");
-  font-family: "equity-caps-b";
   font-size:1em;
   font-weight: bolder;
   padding: 1.5em 0 1.25em;
@@ -39,6 +38,7 @@ acronym {
 p {
   font-family: 'equity-text-b';
   margin: 0 0 1em;
+  padding-left: 1em;
   &:last-of-type {
     margin-bottom: 0;
   }
