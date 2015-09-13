@@ -1,6 +1,7 @@
 angular.module 'uiExperiments.experiments', [
   'ui.router'
   'uiExperiments.record'
+  'uiExperiments.config'
 ]
 
 angular.module('uiExperiments.experiments').config ($stateProvider) ->

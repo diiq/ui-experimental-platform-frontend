@@ -2,18 +2,19 @@
 angular.module('uiExperiments', [
   # External modules
   'ui.router'
+  'cfp.hotkeys'
   'angular-loading-bar'
   'uiExperiments.record'
   'uiExperiments.config'
   'uiExperiments.directives'
 
   # MODULE LIST AUTOGEN BELOW THIS LINE
-  #  'uiExperiments.experiments.fittsLaw'
-  #  'uiExperiments.experiments'
+  'uiExperiments.experiments.fittsLaw'
+  'uiExperiments.experiments'
   'uiExperiments.signup'
   'uiExperiments.homepage'
   'uiExperiments.login'
-  'uiExperiments.arrowMenuTest'
+  #'uiExperiments.arrowMenuTest'
 ])
 
 
