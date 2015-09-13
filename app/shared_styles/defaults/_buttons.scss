@@ -1,5 +1,5 @@
 // #{$all-button-inputs},
-button {
+button, .button {
   @include appearance(none);
 
   display: inline-block;
@@ -18,13 +18,11 @@ button {
   font-weight: 600;
   -webkit-font-smoothing: antialiased;
   user-select: none;
-  border-top: 1px solid lighten($action-color, 15%);
 
   &:hover,
   &:focus {
     background-color: darken($action-color, 15%);
     color: #fff;
-    border-color: transparent;
   }
 
   &:focus {
@@ -39,14 +37,33 @@ button {
   }
 
   &.secondary {
-    background-color: $light-gray;
-    border-top: 1px solid lighten($light-gray, 15%);
+    background-color: $white;
+    color: $dark-gray;
 
     &:hover,
     &:focus {
-      background-color: darken($light-gray, 15%);
+      background-color: $light-gray;
       color: #fff;
-      border-color: transparent;
+    }
+  }
+
+  &.encouraged {
+    background-color: $green;
+
+    &:hover,
+    &:focus {
+      background-color: darken($green, 15%);
+      color: #fff;
+    }
+  }
+
+  &.dangerous {
+    background-color: $red;
+
+    &:hover,
+    &:focus {
+      background-color: darken($red, 15%);
+      color: #fff;
     }
   }
 }

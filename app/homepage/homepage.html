@@ -1,7 +1,124 @@
-<div id="homepage">
-  <div class="greeting">
-    Welcome to {{ homepage.value }}!
-  </div>
+<div id="homepage" class="grid-container">
+  <div class="page">
+    <div class="section header">
+      <a ui-sref="login" class="action login">Log in</a>
+      <button ui-sref="signup" class="action signup">Sign Up</button>
+    </div>
+    <div class="text section">
+      <h3>What is this?</h3>
+      <p>I build experiments in an attempt to learn about
+      human-computer interaction, and uncover more of those laws. I
+      make the experiments available for anyone to participate in, my
+      conclusions available for anyone to read and critique, and I
+      make the raw data available for anyone to crunch.</p>
 
-  <p>Why don't you <a ui-sref='login'>Log in</a>?</p>
+      <p>These experiments also serve as a storehouse of different interfaces that I've seen, admired, or asked questions about.</p>
+
+      <h3>What do you mean by &ldquo;experiments?&rdquo;</h3>
+      <p>We have basic laws of mouse-based actions (like
+        <a href="https://en.wikipedia.org/wiki/Fitts%27s_law">Fitts&rsquo;
+          Law</a> and the <a href="https://en.wikipedia.org/wiki/Steering_law">Accot-Zhai
+          Steering Law</a>), and laws of choice (like
+        the <a href="https://en.wikipedia.org/wiki/Hick%27s_law">Hick-Hymen
+          Law</a>). These laws tell us things that usually seem obvious
+        in retrospect, but they attach that common sense to real
+        measurements, and give us good back-of-the-envelope guesses
+        about what variables are most important.</p>
+    </div>
+    <div class="section">
+      laws of action
+    </div>
+    <div class="text section">
+      <p>These laws hardly seem to cover the broad spectrum of
+      interfaces afforded by combinations of mouse, keyboard,
+      touchscreen and stylus. I get ideas for all kinds of strange
+      human-computer interfaces; and (to judge from the movies) I'm
+      not the only one. There's already a preponderance
+      of <em>existing</em> interface elements. How do we choose? What
+      makes one better than another? What variables will alter
+      efficiency and accuracy? These are the questions I want to
+      answer.</p>
+
+      <h3>This doesn't seem like a good way to measure intuitive, elegant UI.</h3>
+      <p>You're right &mdash; it's not.</p>
+
+      <p>Because it is in fashion at the moment to aim for a massive
+      audience, of millions or even hundreds of millions of users,
+      much emphasis has been placed on discoverability and intuitive
+      design. That is good! There is a lot of software that everyone
+      should be able to use without a learning curve.</p>
+
+      <p>For the most part, intuitive just means
+      &ldquo;familiar.&rdquo; If you want to build an intuitive UI,
+      use whatever idioms your audience already uses most
+      frequently.</p>
+
+      <p>But I don't work at a startup; I work at a consultancy. We
+      rarely get asked to build a new Facebook or another Twitter.
+      We're more frequently tasked with building software that a small
+      number of people use <em>all day, every day</em>. These are
+      people who have little interest in intuitive design; they want
+      speed and power. They're power users; or they want to be; or
+      their employers want them to be.</p>
+
+      <p>Data never tells the whole story; and efficency is never the
+      only goal. But they're certainly <em>part</em> of the story,
+      and <em>part</em> of the goal.</p>
+
+      <h3>Why? Don't we already know a lot of this?</h3>
+      <p>Perhaps less than you might think; and, if I rediscover
+      something everyone else already knows, <em>I've</em> still
+      learned something.</p>
+
+      <p>I'm an Emacs user. When I first tried Sublime Text, it's file
+      navigation was a complete revelation. If you're unfamiliar with
+      it, you should give it a try. In particular, you can search for
+      files based on 'initialisms': with the keystrokes <tt>Ctrl-p d a
+      f</tt>, I could find the
+      file <tt>'app/<strong>d</strong>irectives/<strong>a</strong>uto-<strong>f</strong>ocus'</tt>.</p>
+    </div>
+    <div class="section">
+      little gif of find anything
+    </div>
+    <div class="text section">
+      <p>Where before I had to type most of the filename, now I was
+      using four keystrokes! Four keystrokes is short enough to become
+      muscle memory; I could open a file <em>just by thinking about
+      it</em>.</p>
+
+      <p>I returned to emacs-land, and did my best to recreate it;
+      Atom has also tried to copy-cat. But everyone seems to copy
+      the <em>appearance</em> of the interface without copying
+      the <em>important</em> part: the scoring algorithm that puts the
+      right file on top of the list. It's <strong>not</strong> just
+      search, or even fuzzy search. It is its own distinct animal that
+      deserves separate attention and respect.</p>
+
+
+      <h3>Is any of this any use to normal people?</h3>
+      <p>I designed an interface for a group of clothing specialists,
+      once. They needed to enter specific, structured data about
+      individual pieces of clothing, and the faster they did, the
+      stronger their business would be.</p>
+
+      <p>When I told them they should be using hotkeys, they were
+      terrified. They were <em>not</em> technophilic; they were
+      clothing-people, not computer-people, and they fully expected to
+      be lost trying to use the new software.</p>
+
+      <p>But when the new software was finished, I explained it to
+      each of them, and made sure that mnemonics were clearly
+      displayed. And within one workday &mdsash; faster than I
+      had <em>dreamed</em> &mdash; 90% of their interactions were
+      keyboard-only. And they <em>loved</em> it.</p>
+
+      <p>Many, many jobs now involve using just one or two pieces of
+      specialized software all day. Factory workers, sales associates,
+      warehouse workers, middle managers, delivery truck drivers
+      &mdash; really and truly, almost every job involves one piece of
+      software so constant that it becomes almost invisible. It is
+      those interfaces that deserve to be stunningly efficient and
+      fantastically in-tune with their users.</p>
+    </div>
+  </div>
 </div>
