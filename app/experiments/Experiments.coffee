@@ -10,6 +10,9 @@ angular.module('uiExperiments.experiments').config ($stateProvider) ->
       url: '/experiments'
       templateUrl: '/experiments/experiments.html'
       controller: 'ExperimentsCtrl as experiments'
+      resolve:
+        experiments: (ExperimentService) ->
+          ExperimentService.experiments()
 
   $stateProvider
     .state 'experiment',

@@ -1,6 +1,4 @@
 angular.module('uiExperiments.homepage')
-.controller 'HomepageCtrl', ->
-
-  @value = "Homepage"
+.controller 'HomepageCtrl', (@experiments) ->
 
   return this

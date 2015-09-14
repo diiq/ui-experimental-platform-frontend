@@ -4,7 +4,7 @@ angular.module 'uiExperiments.experiments.fittsLaw', [
 
 angular.module('uiExperiments.experiments.fittsLaw').config ($stateProvider) ->
   $stateProvider
-    .state 'experiment.fittsLaw',
+    .state 'experiment.fitts-law',
       url: '/fitts-law'
       templateUrl: '/experiments/fitts_law/fitts_law.html'
       controller: 'FittsLawCtrl as experiment'

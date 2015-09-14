@@ -11,16 +11,19 @@ body {
 
 h1,
 h2,
-h3,
+h3 {
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin-top:0;
+  margin-bottom:0;
+}
+
 h4,
 h5,
 h6 {
-  font-size: $base-font-size;
-  line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
 
-h1, h2, h3 { margin-top:0; margin-bottom:0; }
 h1 { font-size:1.5em; padding:1.45833em 0; }
 h2 { font-size:1.33333em; padding:1.25em 0; }
 h3 {
@@ -59,7 +62,7 @@ a {
   &.white {
     color: #fff;
 
-    &:active,
+     &:active,
     &:focus,
     &:hover {
       color: #eee;

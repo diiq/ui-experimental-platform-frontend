@@ -1,0 +1,20 @@
+@import 'imports';
+
+#header {
+  @include clearfix;
+
+  .action {
+    @include span-columns(2);
+    font-weight: bold;
+    padding: $base-spacing / 4;
+  }
+
+  .login {
+    @include shift(8);
+    background-color: transparent;
+    border: 0;
+    text-align: center;
+    padding-top: .3em;
+    padding-bottom: 0;
+  }
+}

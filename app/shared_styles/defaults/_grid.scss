@@ -16,13 +16,17 @@ body {
   }
 
 
-  .page {
+  &.page {
     border-radius: $base-border-radius;
     background-color: $white;
     overflow: hidden;
 
     .section {
       padding: $base-spacing;
+
+      @include media($mobile-grid) {
+        padding: $base-spacing / 2;
+      }
 
       &.text {
         @include clearfix;

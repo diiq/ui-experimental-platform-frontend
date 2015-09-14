@@ -1,6 +1,35 @@
 <div id="experiments">
-  <div class="greeting">
-    Welcome to {{ experiments.value }}
-    <a ui-sref="experiment.fittsLaw">fitts</a>
+  <div class="page grid-container">
+    <div class="section" ng-include="'/header/header.html'"></div>
+
+    <div class="section">
+      <!-- We'll factor this out later -->
+      <div class="experiment-preview"
+           ng-repeat="experiment in experiments.experiments"
+           ui-sref="experiment.{{ experiment.slug }}">
+        <div class="img"></div>
+
+        <div class="content">
+          <h3 class="title">{{ experiment.title }}</h3>
+          <p class="description">Move the squid into the box to get a prize</p>
+        </div>
+        <div class="requirements">
+          <div class="duration">{{experiment.session_count}} session{{ experiment.session_count > 1 ? "s" : "" }} of ~{{ experiment.session_duration }} minutes.</div>
+
+          <i ng-if="experiment.requires_keyboard" class="fa fa-keyboard-o"></i>
+          <i ng-if="experiment.requires_touch" class="fa fa-hand-pointer-o"></i>
+          <i ng-if="experiment.requires_mouse" class="fa fa-mouse-pointer"></i>
+        </div>
+        <div class="results"
+             ng-if="!experiment.has_results">
+          No results yet...
+        </div>
+
+        <div class="results has-results"
+             ng-if="experiment.has_results">
+          Read the results!
+        </div>
+      </div>
+    </div>
   </div>
 </div>

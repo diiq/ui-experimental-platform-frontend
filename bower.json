@@ -16,6 +16,7 @@
     "angular-loading-bar": "~0.6.0",
     "angular-ui-router": "0.2.12",
     "bourbon": "~4.2.x",
+    "font-awesome": "~4.4.0",
     "lodash": "~3.1.0",
     "neat": "~1.7.x"
   },
@@ -27,6 +28,12 @@
       "main": [
         "build/hotkeys.js",
         "build/hotkeys.css"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.min.css",
+        "fonts/*"
       ]
     }
   }

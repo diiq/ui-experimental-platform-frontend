@@ -21,3 +21,8 @@ $border-box-sizing: false;
 
 // Enables a gray grid showing the columns in the grid for debugging purposes
 // $visual-grid: true;
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}

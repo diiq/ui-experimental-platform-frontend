@@ -1,6 +1,4 @@
 angular.module('uiExperiments.experiments')
-.controller 'ExperimentsCtrl', ->
-
-  @value = "Experiments"
+.controller 'ExperimentsCtrl', (@experiments) ->
 
   return this
