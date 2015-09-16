@@ -9,3 +9,7 @@ angular.module('uiExperiments.homepage').config ($stateProvider) ->
       url: '/'
       templateUrl: '/homepage/homepage.html'
       controller: 'HomepageCtrl as homepage'
+
+      resolve:
+        experiments: (ExperimentService) ->
+          ExperimentService.experiments()

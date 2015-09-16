@@ -3,4 +3,45 @@
 #homepage {
   padding-top: $base-spacing;
   padding-bottom: $base-spacing;
+
+  /* just a demo, feel free to make this however you like in your app */
+
+  .cardflow-wrapper {
+    height: 402px;
+    position:relative;
+    overflow:hidden;
+    width: 100%;
+  }
+
+  .cardflow-container {
+    /* just make it big enough to float the second card next to first, so I can calculate offsets & width */
+    width: 300%;
+
+    /* disable text selection */
+    -webkit-touch-callout: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+
+    cursor: pointer;
+
+    /* card movement transition */
+    transition: transform 0.25s ease-out;
+    -webkit-transition: -webkit-transform 0.25s ease-out;
+    -moz-transition: -moz-transform 0.25s ease-out;
+    -o-transition: -o-transform 0.25s ease-out;
+    -ms-transition: -ms-transform 0.25s ease-out;
+
+  }
+
+
+  experiment {
+    float:left;
+    margin-right: $base-spacing;
+    width: 100px;
+  }
 }

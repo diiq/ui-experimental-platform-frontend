@@ -1,16 +1,33 @@
 <div id="homepage">
   <div class="page grid-container">
     <div class="section" ng-include="'/header/header.html'"></div>
+    <div class="section experiments" id="experiments-section">
+      <button ng-click="homepage.cardflow.current=homepage.cardflow.current-homepage.perPage"
+              ng-disabled="homepage.cardflow.current <= 0">&lt;</button>
 
+{{ homepage.cardflow.current+1 }} / {{ homepage.experiments.length }}
+
+      <button ng-click="homepage.cardflow.current=homepage.cardflow.current+homepage.perPage"
+              ng-disabled="homepage.cardflow.current >= (homepage.experiments.length-homepage.perPage)">&gt;</button>
+
+      <cardflow model="homepage.cardflow" mode="swipeSnapKinetic" class="page carousel">
+        <experiment class="cardflow-card"
+                    style="width: {{homepage.cardWidth()}}px"
+                    experiment="experiment"
+                    ng-repeat="experiment in homepage.experiments"></experiment>
+      </cardflow>
+    </div>
     <div class="text section">
       <h3>What is this?</h3>
       <p>I build experiments in an attempt to learn about
-      human-computer interaction, and uncover more of those laws. I
-      make the experiments available for anyone to participate in, my
+        human-computer interaction, and uncover more of those laws. I
+        make the experiments available for anyone to participate in, my
       conclusions available for anyone to read and critique, and I
       make the raw data available for anyone to crunch.</p>
 
-      <p>These experiments also serve as a storehouse of different interfaces that I've seen, admired, or asked questions about.</p>
+      <p>These experiments also serve as a storehouse of different
+      interfaces that I've seen, admired, or asked questions
+      about.</p>
 
       <h3>What do you mean by &ldquo;experiments?&rdquo;</h3>
       <p>We have basic laws of mouse-based actions (like

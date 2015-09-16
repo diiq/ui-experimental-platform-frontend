@@ -4,6 +4,7 @@ angular.module('uiExperiments', [
   'ui.router'
   'cfp.hotkeys'
   'angular-loading-bar'
+  'angular-cardflow'
   'uiExperiments.record'
   'uiExperiments.config'
   'uiExperiments.directives'
