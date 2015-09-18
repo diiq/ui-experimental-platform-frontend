@@ -4,6 +4,7 @@ experiment-carousel {
   @include clearfix;
   display: block;
   position: relative;
+  padding-right: 0px !important;
 
   .carousel-left, .carousel-right {
     color: $medium-gray;
@@ -32,6 +33,7 @@ experiment-carousel {
     position:relative;
     overflow:hidden;
     width: 100%;
+    padding-left: 2px;
   }
 
   .cardflow-container {
@@ -50,11 +52,11 @@ experiment-carousel {
     cursor: pointer;
 
     /* card movement transition */
-    transition: transform 0.25s ease-out;
-    -webkit-transition: -webkit-transform 0.25s ease-out;
-    -moz-transition: -moz-transform 0.25s ease-out;
-    -o-transition: -o-transform 0.25s ease-out;
-    -ms-transition: -ms-transform 0.25s ease-out;
+    transition: transform 1s ease-out;
+    -webkit-transition: -webkit-transform 1s ease-out;
+    -moz-transition: -moz-transform 1s ease-out;
+    -o-transition: -o-transform 1s ease-out;
+    -ms-transition: -ms-transform 1s ease-out;
 
   }
 
