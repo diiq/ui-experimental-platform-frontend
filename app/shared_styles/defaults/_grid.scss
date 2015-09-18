@@ -22,7 +22,7 @@ body {
     overflow: hidden;
 
     .section {
-      padding: $base-spacing;
+      padding: $base-spacing / 2 $base-spacing;
 
       @include media($mobile-grid) {
         padding: $base-spacing / 2;
@@ -31,7 +31,7 @@ body {
       &.text {
         @include clearfix;
         background-color: #fff;
-        padding: $base-spacing;
+        padding: $base-spacing $base-spacing * 2;
 
         &:last-of-type {
           padding-bottom: $base-spacing * 3;

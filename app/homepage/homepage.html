@@ -1,22 +1,8 @@
 <div id="homepage">
   <div class="page grid-container">
     <div class="section" ng-include="'/header/header.html'"></div>
-    <div class="section experiments" id="experiments-section">
-      <button ng-click="homepage.cardflow.current=homepage.cardflow.current-homepage.perPage"
-              ng-disabled="homepage.cardflow.current <= 0">&lt;</button>
-
-{{ homepage.cardflow.current+1 }} / {{ homepage.experiments.length }}
-
-      <button ng-click="homepage.cardflow.current=homepage.cardflow.current+homepage.perPage"
-              ng-disabled="homepage.cardflow.current >= (homepage.experiments.length-homepage.perPage)">&gt;</button>
-
-      <cardflow model="homepage.cardflow" mode="swipeSnapKinetic" class="page carousel">
-        <experiment class="cardflow-card"
-                    style="width: {{homepage.cardWidth()}}px"
-                    experiment="experiment"
-                    ng-repeat="experiment in homepage.experiments"></experiment>
-      </cardflow>
-    </div>
+    <experiment-carousel class="section" experiments="homepage.experiments">
+    </experiment-carousel>
     <div class="text section">
       <h3>What is this?</h3>
       <p>I build experiments in an attempt to learn about
