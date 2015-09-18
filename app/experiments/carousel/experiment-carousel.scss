@@ -1,0 +1,67 @@
+@import 'imports';
+
+experiment-carousel {
+  @include clearfix;
+  display: block;
+  position: relative;
+
+  .carousel-left, .carousel-right {
+    color: $medium-gray;
+    position: absolute;
+    bottom: 3px;
+    height: 50px;
+    width: 20px;
+    opacity: .5;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 20px;
+
+    &:hover {
+      color: $dark-gray;
+    }
+  }
+  .carousel-left {
+    left: 5px;
+  }
+  .carousel-right {
+    right: 5px;
+  }
+
+  .cardflow-wrapper {
+    height: 402px;
+    position:relative;
+    overflow:hidden;
+    width: 100%;
+  }
+
+  .cardflow-container {
+    width: 300%;
+
+    /* disable text selection */
+    -webkit-touch-callout: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+
+    cursor: pointer;
+
+    /* card movement transition */
+    transition: transform 0.25s ease-out;
+    -webkit-transition: -webkit-transform 0.25s ease-out;
+    -moz-transition: -moz-transform 0.25s ease-out;
+    -o-transition: -o-transform 0.25s ease-out;
+    -ms-transition: -ms-transform 0.25s ease-out;
+
+  }
+
+
+  experiment {
+    float:left;
+    margin-right: $base-spacing;
+    width: 100px;
+  }
+}

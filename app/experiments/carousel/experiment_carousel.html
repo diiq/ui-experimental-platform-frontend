@@ -1,0 +1,19 @@
+<div ng-mouseover="autoAdvance=false"
+     ng-mouseout="autoAdvance=true">
+  <div class="carousel-left fa fa-chevron-left"
+       ng-click="cardflow.current=cardflow.current-perPage"
+       ng-hide="cardflow.current <= 0"></div>
+
+  <div class="carousel-right fa fa-chevron-right"
+       ng-click="cardflow.current=cardflow.current+perPage"
+       ng-hide="cardflow.current >= (experiments.length-perPage-1)"></div>
+
+  <cardflow model="cardflow"
+            mode="swipeSnapKinetic"
+            class="page carousel">
+    <experiment class="cardflow-card"
+                style="width: {{cardWidth}}px"
+                experiment="experiment"
+                ng-repeat="experiment in experiments"></experiment>
+  </cardflow>
+</div>
