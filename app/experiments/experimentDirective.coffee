@@ -1,5 +1,5 @@
 angular.module('uiExperiments.directives')
-.directive 'experiment', ($timeout) ->
+.directive 'experiment', () ->
   restrict: 'E'
   templateUrl: '/experiments/experiment_directive.html'
   scope:

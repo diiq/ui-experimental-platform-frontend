@@ -15,6 +15,7 @@ angular.module('uiExperiments', [
   'uiExperiments.signup'
   'uiExperiments.homepage'
   'uiExperiments.login'
+  'uiExperiments.header'
   #'uiExperiments.arrowMenuTest'
 ])
 

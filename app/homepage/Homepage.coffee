@@ -1,6 +1,7 @@
 angular.module 'uiExperiments.homepage', [
   'ui.router'
   'uiExperiments.experiments'
+  'uiExperiments.header'
 ]
 
 angular.module('uiExperiments.homepage').config ($stateProvider) ->

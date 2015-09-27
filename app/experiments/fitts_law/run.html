@@ -1,0 +1,12 @@
+<div id="fittsLaw">
+  <div class="message">{{experiment.count}}/{{experiment.goal}} complete</div>
+  <div id="green-box"
+       class="green-box"
+       ng-style="{left: experiment.left, width: experiment.width}"></div>
+
+  <horiz-draggable id="red-dot"
+                   on-stop="experiment.stopDrag(position)"
+                   on-start="experiment.startDrag()"
+                   class="red-dot"></horiz-draggable>
+
+</div>

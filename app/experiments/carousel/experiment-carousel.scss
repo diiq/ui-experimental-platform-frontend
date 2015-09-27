@@ -2,9 +2,11 @@
 
 experiment-carousel {
   @include clearfix;
+  background-color: $white;
   display: block;
   position: relative;
   padding-right: 0px !important;
+  padding-left: 0px !important;
 
   .carousel-left, .carousel-right {
     color: $medium-gray;
@@ -22,10 +24,10 @@ experiment-carousel {
     }
   }
   .carousel-left {
-    left: 5px;
+    left: 3px;
   }
   .carousel-right {
-    right: 5px;
+    right: -2px;
   }
 
   .cardflow-wrapper {
@@ -33,11 +35,12 @@ experiment-carousel {
     position:relative;
     overflow:hidden;
     width: 100%;
-    padding-left: 2px;
+
   }
 
   .cardflow-container {
     width: 300%;
+    padding-left: $gutter;
 
     /* disable text selection */
     -webkit-touch-callout: none;
@@ -63,7 +66,7 @@ experiment-carousel {
 
   experiment {
     float:left;
-    margin-right: $base-spacing;
+    margin-right: $gutter;
     width: 100px;
   }
 }

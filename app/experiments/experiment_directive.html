@@ -1,6 +1,11 @@
 <div class="experiment-preview"
-     ui-sref="experiment.{{ experiment.slug }}">
+     ui-sref="experiment.{{ experiment.slug }}.info">
   <div class="img"></div>
+
+  <div class="results has-results"
+       ng-if="experiment.has_results">
+    Read the results!
+  </div>
 
   <div class="content">
     <h3 class="title">{{ experiment.title }}</h3>
@@ -16,10 +21,5 @@
   <div class="results"
        ng-if="!experiment.has_results">
     No results yet...
-  </div>
-
-  <div class="results has-results"
-       ng-if="experiment.has_results">
-    Read the results!
   </div>
 </div>

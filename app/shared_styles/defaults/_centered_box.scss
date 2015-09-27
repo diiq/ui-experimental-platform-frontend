@@ -24,6 +24,21 @@
   .centered-box-contents {
     @include clearfix;
     padding: $base-spacing;
+
+    &.text {
+      border-top: $base-border;
+      background-color: #fff;
+
+      h3 {
+        padding-top: 0;
+      }
+    }
+
+    button, .button {
+      float: right;
+      margin-left: $base-spacing;
+      margin-top: $base-spacing;
+    }
   }
 
   .centered-box-flash {

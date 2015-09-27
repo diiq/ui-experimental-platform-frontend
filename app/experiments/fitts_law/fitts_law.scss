@@ -1,5 +1,21 @@
 @import 'imports';
 
 #fittsLaw {
+  height: 100%;
 
+  .red-dot {
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: $red;
+    position: fixed;
+    top: 40%;
+  }
+
+  .green-box {
+    position: fixed;
+    height: 100%;
+    background-color: $green;
+    top: 0;
+  }
 }

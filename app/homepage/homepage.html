@@ -1,8 +1,11 @@
 <div id="homepage">
   <div class="page grid-container">
-    <div class="section" ng-include="'/header/header.html'"></div>
+    <header></header>
+
     <experiment-carousel class="section" experiments="homepage.experiments">
     </experiment-carousel>
+    <a class="experiments-link" ui-sref="experiments">view all experiments</a>
+
     <div class="text section">
       <h3>What is this?</h3>
       <p>I build experiments in an attempt to learn about

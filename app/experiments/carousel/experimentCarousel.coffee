@@ -13,18 +13,20 @@ angular.module('uiExperiments.experiments')
     # Gross magic numbers to fake out responsive card layouts (1, 2,
     # or 3 cards wide)
     calcCardWidth = () ->
+      scope.autoAdvance = true
       scope.perPage = 2
       sectionWidth = element[0].offsetWidth
-      cardWidth = sectionWidth / 3 - 41
+      cardWidth = sectionWidth / 3 - 32
       if cardWidth > 250
         return cardWidth
 
       scope.perPage = 1
-      cardWidth = sectionWidth / 2 - 46
+      scope.autoAdvance = false
+      cardWidth = sectionWidth / 2 - 36
       if cardWidth > 250
         return cardWidth
 
-      return sectionWidth - 32
+      return sectionWidth - 48
 
     scope.cardWidth = calcCardWidth()
 
@@ -39,10 +41,9 @@ angular.module('uiExperiments.experiments')
 
     w.bind 'resize', ->
       scope.$apply ->
-        console.log scope.cardflow
         scope.cardWidth = calcCardWidth()
         $timeout ->
-          scope.cardflow.cardWidth = measureCardWidth() + 30
+          scope.cardflow.cardWidth = measureCardWidth() + 24
           scope.cardflow.current = 0
 
     # Autoadvance the carousel to show off all the cards, except when
@@ -51,6 +52,5 @@ angular.module('uiExperiments.experiments')
       if scope.autoAdvance
         scope.cardflow.current += scope.perPage
         if scope.cardflow.current >= scope.experiments.length - scope.perPage
-          console.log "here"
           scope.cardflow.current = 0
     , 5000

@@ -1,6 +1,12 @@
 @import 'imports';
 
 #homepage {
-  padding-top: $base-spacing;
-  padding-bottom: $base-spacing;
+  .experiments-link {
+    background-color: #fff;
+    text-align: center;
+    display: block;
+    font-weight: normal;
+    font-family: "equity-caps-b";
+    border-bottom: 1px solid $white;
+  }
 }

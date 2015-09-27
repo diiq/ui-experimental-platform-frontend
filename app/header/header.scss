@@ -1,20 +1,39 @@
 @import 'imports';
 
-#header {
+header {
   @include clearfix;
+  background-color: #fff;
+  padding: $gutter / 2 $gutter;
+
+  @include media($mobile-grid) {
+    padding: $base-spacing / 2 $gutter;
+  }
+
+  .logo {
+    position: absolute;
+    width: 140px;
+
+    @include media($mobile-grid) {
+      display: none;
+    }
+  }
 
   .action {
     @include span-columns(2);
-    font-weight: bold;
-    padding: $base-spacing / 4;
+
+    @include media($mobile-grid) {
+      @include span-columns(1);
+    }
+    text-align: right;
   }
 
   .login {
+    @include span-columns(2);
     @include shift(8);
-    background-color: transparent;
-    border: 0;
-    text-align: center;
-    padding-top: .3em;
-    padding-bottom: 0;
+
+    @include media($mobile-grid) {
+      @include span-columns(1);
+      @include shift(2);
+    }
   }
 }

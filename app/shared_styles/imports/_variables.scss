@@ -20,11 +20,11 @@ $orange: #fa0;
 $white: #f2f2f2;
 $green: #75a33f;
 $red: #bf2a2a;
-$base-accent-color: $orange;
 $blue: #477dca;
+$base-accent-color: $orange;
 $dark-gray: #333;
 $medium-gray: #737272;
-$light-gray: #b8b9bf;
+$light-gray: lighten(#bfb9b8, 10%);
 
 // Font Colors
 $base-background-color: #fff;

@@ -1,8 +1,7 @@
-<div ng-keydown="record.key('keydown', $event)"
+<ui-view ng-keydown="record.key('keydown', $event)"
      ng-keyup="record.key('keyup', $event)"
      ng-keypress="record.key('keypress', $event)"
      ng-mousedown="record.mouse('mousedown', $event)"
      ng-mouseup="record.mouse('mouseup', $event)"
      ng-mousemove="record.mouseMove('mousemove', $event)">
-     <ui-view></ui-view>
-</div>
+</ui-view>

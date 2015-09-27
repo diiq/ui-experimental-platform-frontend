@@ -1,37 +1,50 @@
 body {
-  background-color: $light-gray;
+  background-color: lighten($white, 4%);
+}
+
+.whole-page {
+  padding-top: $base-spacing;
+  padding-bottom: $base-spacing;
 }
 
 .grid-container {
   @include outer-container();
 
   @include media($tablet-grid) {
-    margin-right: $base-spacing;
-    margin-left: $base-spacing;
+    margin-right: $gutter;
+    margin-left: $gutter;
   }
 
   @include media($mobile-grid) {
-    margin-right: $base-spacing / 2;
-    margin-left: $base-spacing / 2;
+    margin-right: $gutter / 2;
+    margin-left: $gutter / 2;
   }
 
 
   &.page {
     border-radius: $base-border-radius;
+    border: $base-border;
     background-color: $white;
     overflow: hidden;
 
-    .section {
-      padding: $base-spacing / 2 $base-spacing;
+    section, .section {
+      padding: $gutter / 2 $gutter;
 
       @include media($mobile-grid) {
-        padding: $base-spacing / 2;
+        padding: $base-spacing / 2  $gutter / 2;
       }
 
       &.text {
         @include clearfix;
         background-color: #fff;
-        padding: $base-spacing $base-spacing * 2;
+        padding: $base-spacing $gutter * 2;
+
+        @include media($mobile-grid) {
+          padding: $base-spacing  $gutter;
+          > p {
+            padding-left: 0;
+          }
+        }
 
         &:last-of-type {
           padding-bottom: $base-spacing * 3;

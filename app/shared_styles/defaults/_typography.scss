@@ -40,6 +40,7 @@ acronym {
 
 p {
   font-family: 'equity-text-b';
+  font-size: 1.05em;
   margin: 0 0 1em;
   padding-left: 1em;
   &:last-of-type {
@@ -49,23 +50,34 @@ p {
 
 a {
   text-decoration: none;
-  color: $action-color;
+  color: $blue;
   cursor: pointer;
   font-weight: bold;
 
   &:active,
   &:focus,
   &:hover {
-    color: darken($action-color, 5%);
+    color: darken($blue, 5%);
+    text-decoration: underline;
   }
 
   &.white {
     color: #fff;
 
-     &:active,
+    &:active,
     &:focus,
     &:hover {
       color: #eee;
+    }
+  }
+
+  &.accent {
+    color: $base-accent-color;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: darken($base-accent-color, 5%);
     }
   }
 
